@@ -1,5 +1,13 @@
-if (navigator.geolocation) {
-  navigator.geolocation.getCurrentPosition(function(position) {
-    $("#data").html("latitude: " + position.coords.latitude + "<br>longitude: " + position.coords.longitude);
-  });
+$(document).ready(function(){
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(function(position) {
+      var lat = position.coords.latitude;
+      var lon = position.coords.longitude;
+    });
+  }else {
+    conlsole.log("Geolocation no supported");
+  }
+}
+function getWeather(lat, lon){
+  
 }
